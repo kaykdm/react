@@ -3,10 +3,24 @@
     <script src="../../../build/node_modules/react/umd/react.development.js"></script>
     <script src="../../../build/node_modules/react-dom/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.js"></script>
-    <div id="container"></div>
+    <div id="container"><input type="radio" /></div>
     <script type="text/babel">
-      ReactDOM.render(
-        <h1>Hello World!</h1>,
+      // <input type="radio" checked />
+      // <textarea>test</textarea>
+      // <select multiple><option value="1" selected>option 1</option><option value="2" selected>option 2</option><option value="3">option 3</option></select>
+      function IndexPage() {
+        return (
+          <input type="checkbox" />
+          // <textarea defaultValue="test" />
+          // <select defaultValue={[1,2]}>
+          //   <option value="1">option 1</option>
+          //   <option value="2">option 2</option>
+          //   <option value="3">option 3</option>
+          // </select>
+        )
+      }
+      ReactDOM.hydrate(
+        <IndexPage />,
         document.getElementById('container')
       );
     </script>
